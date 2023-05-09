@@ -1,0 +1,36 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  background-color: #333;
+}
+p {
+  color: var(--main-color);
+  font-size: 30px;
+  width: 418px; /* You Can Use 28ch */
+  margin: 30px auto;
+  border-right: 2px solid var(--main-color);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: control-width 1s steps(28) 2s both, blink 0.5s infinite;
+}
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 185px;
+  }
+}
+@keyframes blink {
+  from {
+    border-right-color: var(--main-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
